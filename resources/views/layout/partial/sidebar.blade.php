@@ -10,7 +10,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="{{ asset('storage/product-photos/violet evergarden.jpg') }}" class="img-circle elevation-2" alt="User Image">
+        <img src="https://imgs.search.brave.com/xF9VF73xT65Wic2V6Jp74V7RPsLGxqGSijUNEEdgcZo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni8zMTM1LzMxMzU3/MTUucG5nP3NlbXQ9/YWlzX2h5YnJpZA" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
         <a href="#" class="d-block">Tirto Rahardi</a>
