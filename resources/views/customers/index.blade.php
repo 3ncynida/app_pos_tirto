@@ -19,8 +19,7 @@
                                         <th>Address</th>
                                         <th>Member Status</th>
                                         <th>
-                                            <button class="btn btn-warning"><a
-                                                href="{{ route('customer.create') }}">Create Category</a></button>
+                                            <a href="{{ route('customer.create') }}"><button class="btn btn-warning">Create Customer</button></a>
                                         </th>
                                     </tr>
                                 </thead>

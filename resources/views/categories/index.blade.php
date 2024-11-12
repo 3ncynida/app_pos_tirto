@@ -16,8 +16,7 @@
                                         <th>Category Name</th>
                                         <th>Description</th>
                                         <th>
-                                            <button class="btn btn-warning"><a
-                                                    href="{{ route('category.create') }}">Create Category</a></button>
+                                            <a href="{{ route('category.create') }}"><button class="btn btn-warning">Create Category</button></a>
                                         </th>
                                     </tr>
                                 </thead>

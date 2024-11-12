@@ -8,7 +8,7 @@
                         <h3 class="card-title">Daftar Transaksi</h3>
                     </div>
                     <div class="card-body">
-                        <a href="{{ route('transaction.create') }}"><button class="btn btn-warning">Create Product</button></a>
+                        <a href="{{ route('transaction.create') }}"><button class="btn btn-warning">Create Transaction</button></a>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover">
                                 <thead>

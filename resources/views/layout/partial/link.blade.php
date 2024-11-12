@@ -4,3 +4,7 @@
   <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/adminlte.min.css') }}">
+    <!-- Bootstrap Sliders -->
+  <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/bootstrap-slider/css/bootstrap-slider.min.css') }}">
+  <!-- Ion Slider -->
+  <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/ion-rangeslider/css/ion.rangeSlider.min.css')}}">

@@ -17,8 +17,7 @@
                                         <th>Email</th>
                                         <th>Role</th>
                                         <th>
-                                            <button class="btn btn-warning"><a
-                                                    href="{{ route('user.create') }}">Create New User</a></button>
+                                            <a href="{{ route('user.create') }}"><button class="btn btn-warning">Create User</button></a>
                                         </th>
                                     </tr>
                                 </thead>
