@@ -1,5 +1,5 @@
 <h1>Form User</h1>
-<form action="{{route('user.update',$dataEdituser->user_id)}}" method="POST">
+<form action="{{route('sekolah.user.update',$dataEdituser->user_id)}}" method="POST">
     {{ csrf_field() }}
     <input type="hidden" name="_method" value="PUT" />
     Name : <input type="text" name="name" value="{{$dataEdituser->name}}"></br>

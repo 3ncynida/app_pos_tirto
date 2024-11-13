@@ -17,7 +17,7 @@
                                         <th>Email</th>
                                         <th>Role</th>
                                         <th>
-                                            <a href="{{ route('user.create') }}"><button class="btn btn-warning">Create User</button></a>
+                                            <a href="{{ route('sekolah.user.create') }}"><button class="btn btn-warning">Create User</button></a>
                                         </th>
                                     </tr>
                                 </thead>
@@ -29,12 +29,12 @@
                                             <td>{{ $v->email }}</td>
                                             <td>{{ $v->role }}</td>
                                             <td>
-                                                <form action="{{ route('user.destroy', $v->user_id) }}" method="POST">
+                                                <form action="{{ route('sekolah.user.destroy', $v->user_id) }}" method="POST">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="_method" value="DELETE" />
                                                     <div class="btn-group">
                                                         <button type="button" class="btn btn-default bg-success">
-                                                            <a href="{{ route('user.edit', $v->user_id) }}"><i
+                                                            <a href="{{ route('sekolah.user.edit', $v->user_id) }}"><i
                                                                     class="nav-icon fas fa-edit"></i></a>
                                                         </button>
                                                         <button type="submit" class="btn btn-default bg-danger">

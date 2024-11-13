@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('content')
-<form action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
+<form action="{{ route('sekolah.product.store') }}" method="post" enctype="multipart/form-data">
     {{ csrf_field() }}
 <div class="row">
     <div class="col-md-12">

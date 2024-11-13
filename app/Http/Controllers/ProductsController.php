@@ -65,7 +65,7 @@ class ProductsController extends Controller
             'photo' => $photoPath,
         ]);
 
-        return redirect(route('product.index'));
+        return redirect(route('sekolah.product.index'));
     }
 
     /**
@@ -134,7 +134,7 @@ class ProductsController extends Controller
             'photo' => $photoPath,
         ]);
 
-        return redirect(route('product.index'));
+        return redirect(route('sekolah.product.index'));
     }
 
     /**
@@ -146,6 +146,6 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         Products::where('product_id', $id)->delete();
-        return redirect(route('product.index'));
+        return redirect(route('sekolah.product.index'));
     }
 }

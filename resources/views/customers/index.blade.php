@@ -19,7 +19,7 @@
                                         <th>Address</th>
                                         <th>Member Status</th>
                                         <th>
-                                            <a href="{{ route('customer.create') }}"><button class="btn btn-warning">Create Customer</button></a>
+                                            <a href="{{ route('sekolah.customer.create') }}"><button class="btn btn-warning">Create Customer</button></a>
                                         </th>
                                     </tr>
                                 </thead>
@@ -33,13 +33,13 @@
                                             <td>{{ $v->address }}</td>
                                             <td>{{ $v->member_status ? 'Yes' : 'No' }}</td>
                                             <td>
-                                                <form action="{{ route('customer.destroy', $v->customer_id) }}"
+                                                <form action="{{ route('sekolah.customer.destroy', $v->customer_id) }}"
                                                     method="POST">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <div class="btn-group">
                                                         <button type="button" class="btn btn-default bg-success">
-                                                            <a href="{{ route('customer.edit', $v->customer_id) }}"><i class="nav-icon fas fa-edit"></i></a>
+                                                            <a href="{{ route('sekolah.customer.edit', $v->customer_id) }}"><i class="nav-icon fas fa-edit"></i></a>
                                                         </button>
                                                         <button type="submit" class="btn btn-default bg-danger">
                                                             <i class="fa fa-minus"></i>

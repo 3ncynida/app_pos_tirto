@@ -124,7 +124,7 @@ class TransactionController extends Controller
         ]);
 
         // Redirect atau kirim respons sukses
-        return redirect()->route('transaction.index');
+        return redirect()->route('sekolah.transaction.index');
     }
 
     /**
@@ -172,6 +172,6 @@ class TransactionController extends Controller
     public function destroy($id)
     {
         Transactions::where('transaction_id', $id)->delete();
-        return redirect(route('transaction.index'));
+        return redirect(route('sekolah.transaction.index'));
     }
 }

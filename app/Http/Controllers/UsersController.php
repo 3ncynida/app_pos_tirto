@@ -52,7 +52,7 @@ class UsersController extends Controller
             'role' => $request->role,
         ]);
 
-        return redirect(route('user.index'));
+        return redirect(route('sekolah.user.index'));
     }
 
     /**
@@ -113,7 +113,7 @@ class UsersController extends Controller
         // Update data pengguna
         $dataUpdateuser->update($updateData);
 
-        return redirect(route('user.index'));
+        return redirect(route('sekolah.user.index'));
     }
 
     /**
@@ -125,6 +125,6 @@ class UsersController extends Controller
     public function destroy($id)
     {
         Users::where('user_id', $id)->delete();
-        redirect(route('user.index'));
+        redirect(route('sekolah.user.index'));
     }
 }

@@ -52,7 +52,7 @@ class CustomersController extends Controller
             'address'       => $request->address
         ]);
 
-        return redirect(route('customer.index'));
+        return redirect(route('sekolah.customer.index'));
     }
 
     /**
@@ -104,7 +104,7 @@ class CustomersController extends Controller
             'address'       => $request->address
         ]);
 
-        return redirect(route('customer.index'));
+        return redirect(route('sekolah.customer.index'));
     }
 
     /**
@@ -116,6 +116,6 @@ class CustomersController extends Controller
     public function destroy($id)
     {
         Customers::where('customer_id', $id)->delete();
-        return redirect(route('customer.index'));
+        return redirect(route('sekolah.customer.index'));
     }
 }

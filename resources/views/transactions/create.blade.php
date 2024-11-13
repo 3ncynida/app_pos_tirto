@@ -20,7 +20,7 @@
 <body>
     <h1>Tambah Transaksi</h1>
 
-    <form id="transaction-form" action="{{ route('transaction.store') }}" method="POST">
+    <form id="transaction-form" action="{{ route('sekolah.transaction.store') }}" method="POST">
         {{ csrf_field() }}
 
         <!-- Pemilihan Customer -->

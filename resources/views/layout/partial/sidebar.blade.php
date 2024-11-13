@@ -43,31 +43,31 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('category.index') }}" class="nav-link {{ Request::is('sekolah/category') ? 'active' : '' }}">
+              <a href="{{ route('sekolah.category.index') }}" class="nav-link {{ Request::is('sekolah/category') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Category</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('product.index') }}" class="nav-link {{ Request::is('sekolah/product') ? 'active' : '' }}">
+              <a href="{{ route('sekolah.product.index') }}" class="nav-link {{ Request::is('sekolah/product') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Product</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('customer.index') }}" class="nav-link {{ Request::is('sekolah/customer') ? 'active' : '' }}">
+              <a href="{{ route('sekolah.customer.index') }}" class="nav-link {{ Request::is('sekolah/customer') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Customers</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('user.index') }}" class="nav-link {{ Request::is('sekolah/user') ? 'active' : '' }}">
+              <a href="{{ route('sekolah.user.index') }}" class="nav-link {{ Request::is('sekolah/user') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>User</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('transaction.index') }}" class="nav-link {{ Request::is('sekolah/transaction') ? 'active' : '' }}">
+              <a href="{{ route('sekolah.transaction.index') }}" class="nav-link {{ Request::is('sekolah/transaction') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Transaction</p>
               </a>
@@ -86,49 +86,49 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('button') }}" class="nav-link {{ Request::is('UI/button') ? 'active' : '' }}">
+              <a href="{{ route('UI.button') }}" class="nav-link {{ Request::is('UI/button') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Button</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('general') }}" class="nav-link {{ Request::is('UI/general') ? 'active' : '' }}">
+              <a href="{{ route('UI.general') }}" class="nav-link {{ Request::is('UI/general') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>General</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('modals') }}" class="nav-link {{ Request::is('UI/modals') ? 'active' : '' }}">
+              <a href="{{ route('UI.modals') }}" class="nav-link {{ Request::is('UI/modals') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Modals</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('navbar') }}" class="nav-link {{ Request::is('UI/navbar') ? 'active' : '' }}">
+              <a href="{{ route('UI.navbar') }}" class="nav-link {{ Request::is('UI/navbar') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Navbar</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('ribbons') }}" class="nav-link {{ Request::is('UI/ribbons') ? 'active' : '' }}">
+              <a href="{{ route('UI.ribbons') }}" class="nav-link {{ Request::is('UI/ribbons') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Ribbons</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('sliders') }}" class="nav-link {{ Request::is('UI/sliders') ? 'active' : '' }}">
+              <a href="{{ route('UI.sliders') }}" class="nav-link {{ Request::is('UI/sliders') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Sliders</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('timeline') }}" class="nav-link {{ Request::is('UI/timeline') ? 'active' : '' }}">
+              <a href="{{ route('UI.timeline') }}" class="nav-link {{ Request::is('UI/timeline') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Time line</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('icons') }}" class="nav-link {{ Request::is('UI/icons') ? 'active' : '' }}">
+              <a href="{{ route('UI.icons') }}" class="nav-link {{ Request::is('UI/icons') ? 'active' : '' }}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Icons</p>
               </a>

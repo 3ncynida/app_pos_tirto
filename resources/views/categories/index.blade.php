@@ -16,7 +16,7 @@
                                         <th>Category Name</th>
                                         <th>Description</th>
                                         <th>
-                                            <a href="{{ route('category.create') }}"><button class="btn btn-warning">Create Category</button></a>
+                                            <a href="{{ route('sekolah.category.create') }}"><button class="btn btn-warning">Create Category</button></a>
                                         </th>
                                     </tr>
                                 </thead>
@@ -27,14 +27,14 @@
                                             <td>{{ $v->category_name }}</td>
                                             <td>{{ $v->description }}</td>
                                             <td>
-                                                <form action="{{ route('category.destroy', $v->category_id) }}"
+                                                <form action="{{ route('sekolah.category.destroy', $v->category_id) }}"
                                                     method="POST"
                                                     onsubmit="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <div class="btn-group">
                                                         <button type="button" class="btn btn-default bg-success">
-                                                            <a href="{{ route('category.edit', $v->category_id) }}"><i
+                                                            <a href="{{ route('sekolah.category.edit', $v->category_id) }}"><i
                                                                     class="nav-icon fas fa-edit"></i></a>
                                                         </button>
                                                         <button type="submit" class="btn btn-default bg-danger">

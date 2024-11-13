@@ -1,5 +1,5 @@
 <h1>Form Customer</h1>
-<form action="{{route('customer.update', $dataEditcustomer->customer_id)}}" method="POST">
+<form action="{{route('sekolah.customer.update', $dataEditcustomer->customer_id)}}" method="POST">
     {{ csrf_field() }}
     <input type="hidden" name="_method" value="PUT" />
     <label>Customer Name :</label>

@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('content')
-<form action="{{route('customer.store')}}" method="POST">
+<form action="{{route('sekolah.customer.store')}}" method="POST">
     {{ csrf_field() }}
         <div class="row">
             <div class="col-md-12">

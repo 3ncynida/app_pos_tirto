@@ -47,7 +47,7 @@ class CategoriesController extends Controller
             'description' => $request->description
         ]);
 
-        return redirect(route('category.index'));
+        return redirect(route('sekolah.category.index'));
     }
 
     /**
@@ -93,7 +93,7 @@ class CategoriesController extends Controller
            'description'    => $request->description
         ]);
 
-        return redirect(route('category.index'));
+        return redirect(route('sekolah.category.index'));
     }
 
     /**
@@ -105,6 +105,6 @@ class CategoriesController extends Controller
     public function destroy($id)
     {
         Categories::where('category_id', $id)->delete();
-        return redirect(route('category.index'));
+        return redirect(route('sekolah.category.index'));
     }
 }

@@ -8,7 +8,7 @@
                         <h3 class="card-title">Daftar Transaksi</h3>
                     </div>
                     <div class="card-body">
-                        <a href="{{ route('transaction.create') }}"><button class="btn btn-warning">Create Transaction</button></a>
+                        <a href="{{ route('sekolah.transaction.create') }}"><button class="btn btn-warning">Create Transaction</button></a>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover">
                                 <thead>
@@ -38,11 +38,11 @@
                                             <td>
                                                 <div class="btn-group">
                                                     <!-- Edit Button -->
-                                                    <a href="{{ route('transaction.show', $transaction->transaction_id) }}" class="btn btn-default bg-success text-white">
+                                                    <a href="{{ route('sekolah.transaction.show', $transaction->transaction_id) }}" class="btn btn-default bg-success text-white">
                                                         <i class="nav-icon fas fa-tag"></i>
                                                     </a>
                                                     <!-- Delete Button (Form) -->
-                                                    <form action="{{ route('transaction.destroy', $transaction->transaction_id) }}" method="POST" style="display:inline;">
+                                                    <form action="{{ route('sekolah.transaction.destroy', $transaction->transaction_id) }}" method="POST" style="display:inline;">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-default bg-danger">

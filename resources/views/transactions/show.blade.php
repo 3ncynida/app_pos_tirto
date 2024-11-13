@@ -100,7 +100,7 @@
                         </div>
 
                         <!-- Back Button -->
-                        <a href="{{ route('transaction.index') }}" class="btn btn-secondary mt-3">Kembali</a>
+                        <a href="{{ route('sekolah.transaction.index') }}" class="btn btn-secondary mt-3">Kembali</a>
                     </div>
                 </div>
             </div>

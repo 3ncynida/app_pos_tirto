@@ -1,5 +1,5 @@
 <h1>Form Category</h1>
-<form action="{{route('category.update',$dataEditcategory->category_id)}}" method="POST">
+<form action="{{route('sekolah.category.update',$dataEditcategory->category_id)}}" method="POST">
     {{ csrf_field() }}
     <input type="hidden" name="_method" value="PUT">
     Category Name : <input type="text" name="category_name" value="{{$dataEditcategory->category_name}}" /></br>

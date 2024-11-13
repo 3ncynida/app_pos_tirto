@@ -20,7 +20,7 @@
                                         <th>Price</th>
                                         <th>Stock</th>
                                         <th>
-                                            <a href="{{ route('product.create') }}">
+                                            <a href="{{ route('sekolah.product.create') }}">
                                                 <button class="btn btn-warning">Create Product</button>
                                             </a>
                                         </th>
@@ -46,13 +46,13 @@
                                             <td>{{ $v->price }}</td>
                                             <td>{{ $v->stock }}</td>
                                             <td>
-                                                <form action="{{ route('product.destroy', $v->product_id) }}" method="POST"
+                                                <form action="{{ route('sekolah.product.destroy', $v->product_id) }}" method="POST"
                                                     onsubmit="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">
                                                     {{ csrf_field() }}
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <div class="btn-group">
                                                         <button type="button" class="btn btn-default bg-success">
-                                                            <a href="{{ route('product.edit', $v->product_id) }}"
+                                                            <a href="{{ route('sekolah.product.edit', $v->product_id) }}"
                                                                 class="text-white"><i class="nav-icon fas fa-edit"></i></a>
                                                         </button>
                                                         <button type="submit" class="btn btn-default bg-danger">
