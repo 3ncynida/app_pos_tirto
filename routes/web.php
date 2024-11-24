@@ -10,7 +10,7 @@ use App\Http\Controllers\MenuUiController;
 
 // Root route
 Route::get('/', function () {
-    return view('test');
+    return view('welcome');
 });
 
 // UI Routes

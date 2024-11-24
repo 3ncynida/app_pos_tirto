@@ -32,7 +32,7 @@
                                             <td>{{ $transaction->customer->customer_name ?? 'Guest' }}</td>
                                             <td>Rp. {{ number_format($transaction->total_amount, 2) }}</td>
                                             <td>Rp. {{ number_format($transaction->payment->amount ?? 0, 2) }}</td>
-                                            <td>{{ $transaction->users->name }} - {{ $transaction->users->role }}</td>
+                                            <td>{{ $transaction->users->name }}</td>
                                             <td>{{ ucfirst($transaction->status) }}</td>
                                             <td>{{ $transaction->created_at->format('d-m-Y') }}</td>
                                             <td>

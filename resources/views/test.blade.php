@@ -1,381 +1,103 @@
-@extends('layout.main')
-@section('content')
-<section class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6">
+<html lang="id-ID">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<!---
+	You may need jQuery
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	--->
+	<style>
+      
+		header {
+			background: url('bg-425.jpg');
+		}
 
-          <div class="card card-danger">
-            <div class="card-header">
-              <h3 class="card-title">Input masks</h3>
-            </div>
-            <div class="card-body">
-              <!-- Date dd/mm/yyyy -->
-              <div class="form-group">
-                <label>Date masks:</label>
+		@media only screen and (min-width:640px) {
+			header {
+				background: url('bg-640.jpg');
+			}
+		}
 
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
+		@media only screen and (min-width:768px) {
+			header {
+				background: url('bg-768.jpg');
+			}
+		}
 
-              <!-- Date mm/dd/yyyy -->
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="mm/dd/yyyy" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
+		@media only screen and (min-width:1024px) {
+			header {
+				background: url('bg-1024.jpg');
+			}
+		}
 
-              <!-- phone mask -->
-              <div class="form-group">
-                <label>US phone mask:</label>
+		@media only screen and (min-width:1025px) {
+			header {
+				background: url('bg-max.jpg');
+			}
+		}
+      /* Default background by https://www.pexels.com/@knownasovan */
+      header {
+        background:url('https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');}
+	</style>
+	    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+        @vite('resources/css/app.css')
+</head>
 
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
+<body>
 
-              <!-- phone mask -->
-              <div class="form-group">
-                <label>Intl US phone mask:</label>
+	<nav id="nav" class="fixed inset-x-0 top-0 flex flex-row justify-between z-10 text-white bg-transparent">
 
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                  </div>
-                  <input type="text" class="form-control"
-                         data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
+		<div class="p-4">
+			<div class="font-extrabold tracking-widest text-xl"><a href="#" class="transition duration-500 hover:text-indigo-500">E-commerc</a></div>
+		</div>
 
-              <!-- IP mask -->
-              <div class="form-group">
-                <label>IP mask:</label>
+		<!-- Nav Items Working on Tablet & Bigger Sceen -->
+		<div class="p-4 hidden md:flex flex-row justify-between font-bold">
+			<a id="hide-after-click" href="#about" class="mx-4 text-lg  border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">About</a>
+			<a href="#whyus" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Why
+				Us ?</a>
+			<a href="#showcase" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Our
+				Products</a>
+		</div>
 
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-laptop"></i></span>
-                  </div>
-                  <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
+		<!-- Burger Nav Button on Mobile -->
+		<div id="nav-open" class="p-4 md:hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+			 stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+				<line x1="3" y1="12" x2="21" y2="12"></line>
+				<line x1="3" y1="6" x2="21" y2="6"></line>
+				<line x1="3" y1="18" x2="21" y2="18"></line>
+			</svg>
+		</div>
+	</nav>
 
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
+	<!-- Opened Nav in Mobile, you can use javascript/jQuery -->
+	<div id="nav-opened" class="fixed left-0 right-0 hidden bg-white mx-2 mt-16 rounded-br rounded-bl shadow z-10">
+		<div class="p-2 divide-y divide-gray-600 flex flex-col">
+			<a href="#about" class="p-2 font-semibold hover:text-indigo-700">About</a>
+			<a href="#whyus" class="p-2 font-semibold hover:text-indigo-700">Why Us ?</a>
+			<a href="#showcase" class="p-2 font-semibold hover:text-indigo-700">Our Products</a>
+		</div>
+	</div>
 
-          <div class="card card-info">
-            <div class="card-header">
-              <h3 class="card-title">Color & Time Picker</h3>
-            </div>
-            <div class="card-body">
-              <!-- Color Picker -->
-              <div class="form-group">
-                <label>Color picker:</label>
-                <input type="text" class="form-control my-colorpicker1">
-              </div>
-              <!-- /.form group -->
-
-              <!-- Color Picker -->
-              <div class="form-group">
-                <label>Color picker with addon:</label>
-
-                <div class="input-group my-colorpicker2">
-                  <input type="text" class="form-control">
-
-                  <div class="input-group-append">
-                    <span class="input-group-text"><i class="fas fa-square"></i></span>
-                  </div>
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- time Picker -->
-              <div class="bootstrap-timepicker">
-                <div class="form-group">
-                  <label>Time picker:</label>
-
-                  <div class="input-group date" id="timepicker" data-target-input="nearest">
-                    <input type="text" class="form-control datetimepicker-input" data-target="#timepicker"/>
-                    <div class="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
-                        <div class="input-group-text"><i class="far fa-clock"></i></div>
-                    </div>
-                    </div>
-                  <!-- /.input group -->
-                </div>
-                <!-- /.form group -->
-              </div>
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-
+	<header id="up" class="bg-center bg-fixed bg-no-repeat bg-center bg-cover h-screen relative">
+		<!-- Overlay Background + Center Control -->
+		<div class="h-screen bg-opacity-50 bg-black flex items-center justify-center" style="background:rgba(0,0,0,0.5);">
+			<div class="mx-2 text-center">
+				<h1 class="text-gray-100 font-extrabold text-4xl xs:text-5xl md:text-6xl">
+					<span class="text-white">Right</span> Place To
+           </h1>
+           <h2 class="text-gray-200 font-extrabold text-3xl xs:text-4xl md:text-5xl leading-tight">
+            Get a <span class="text-white">Better</span> and <span class="text-white">Professionals</span> Design
+           </h2>
+           <div class="inline-flex">
+           <a href="/login"><button class="p-2 my-5 mx-2 bg-indigo-700 hover:bg-indigo-800 font-bold text-white rounded border-2 border-transparent hover:border-indigo-800 shadow-md transition duration-500 md:text-xl">Login</button></a>
+           <a href="/register"><button class="p-2 my-5 mx-2 bg-transparent border-2 bg-indigo-200 bg-opacity-75 hover:bg-opacity-100 border-indigo-700 rounded hover:border-indigo-800 font-bold text-indigo-800 shadow-md transition duration-500 md:text-lg">Sign up</button></a>
+           </div>
         </div>
-        <!-- /.col (left) -->
-        <div class="col-md-6">
-          <div class="card card-primary">
-            <div class="card-header">
-              <h3 class="card-title">Date picker</h3>
-            </div>
-            <div class="card-body">
-              <!-- Date -->
-              <div class="form-group">
-                <label>Date:</label>
-                  <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                      <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                      <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                      </div>
-                  </div>
-              </div>
-              <!-- Date and time -->
-              <div class="form-group">
-                <label>Date and time:</label>
-                  <div class="input-group date" id="reservationdatetime" data-target-input="nearest">
-                      <input type="text" class="form-control datetimepicker-input" data-target="#reservationdatetime"/>
-                      <div class="input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker">
-                          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                      </div>
-                  </div>
-              </div>
-              <!-- /.form group -->
-              <!-- Date range -->
-              <div class="form-group">
-                <label>Date range:</label>
-
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="far fa-calendar-alt"></i>
-                    </span>
-                  </div>
-                  <input type="text" class="form-control float-right" id="reservation">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- Date and time range -->
-              <div class="form-group">
-                <label>Date and time range:</label>
-
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="far fa-clock"></i></span>
-                  </div>
-                  <input type="text" class="form-control float-right" id="reservationtime">
-                </div>
-                <!-- /.input group -->
-              </div>
-              <!-- /.form group -->
-
-              <!-- Date and time range -->
-              <div class="form-group">
-                <label>Date range button:</label>
-
-                <div class="input-group">
-                  <button type="button" class="btn btn-default float-right" id="daterange-btn">
-                    <i class="far fa-calendar-alt"></i> Date range picker
-                    <i class="fas fa-caret-down"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- /.form group -->
-            </div>
-              <div class="card-footer">
-                Visit <a href="https://getdatepicker.com/5-4/">tempusdominus </a> for more examples and information about
-                the plugin.
-              </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-
-          <!-- iCheck -->
-          <div class="card card-success">
-            <div class="card-header">
-              <h3 class="card-title">iCheck Bootstrap - Checkbox &amp; Radio Inputs</h3>
-            </div>
-            <div class="card-body">
-              <!-- Minimal style -->
-              <div class="row">
-                <div class="col-sm-6">
-                  <!-- checkbox -->
-                  <div class="form-group clearfix">
-                    <div class="icheck-primary d-inline">
-                      <input type="checkbox" id="checkboxPrimary1" checked>
-                      <label for="checkboxPrimary1">
-                      </label>
-                    </div>
-                    <div class="icheck-primary d-inline">
-                      <input type="checkbox" id="checkboxPrimary2">
-                      <label for="checkboxPrimary2">
-                      </label>
-                    </div>
-                    <div class="icheck-primary d-inline">
-                      <input type="checkbox" id="checkboxPrimary3" disabled>
-                      <label for="checkboxPrimary3">
-                        Primary checkbox
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <!-- radio -->
-                  <div class="form-group clearfix">
-                    <div class="icheck-primary d-inline">
-                      <input type="radio" id="radioPrimary1" name="r1" checked>
-                      <label for="radioPrimary1">
-                      </label>
-                    </div>
-                    <div class="icheck-primary d-inline">
-                      <input type="radio" id="radioPrimary2" name="r1">
-                      <label for="radioPrimary2">
-                      </label>
-                    </div>
-                    <div class="icheck-primary d-inline">
-                      <input type="radio" id="radioPrimary3" name="r1" disabled>
-                      <label for="radioPrimary3">
-                        Primary radio
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Minimal red style -->
-              <div class="row">
-                <div class="col-sm-6">
-                  <!-- checkbox -->
-                  <div class="form-group clearfix">
-                    <div class="icheck-danger d-inline">
-                      <input type="checkbox" checked id="checkboxDanger1">
-                      <label for="checkboxDanger1">
-                      </label>
-                    </div>
-                    <div class="icheck-danger d-inline">
-                      <input type="checkbox" id="checkboxDanger2">
-                      <label for="checkboxDanger2">
-                      </label>
-                    </div>
-                    <div class="icheck-danger d-inline">
-                      <input type="checkbox" disabled id="checkboxDanger3">
-                      <label for="checkboxDanger3">
-                        Danger checkbox
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <!-- radio -->
-                  <div class="form-group clearfix">
-                    <div class="icheck-danger d-inline">
-                      <input type="radio" name="r2" checked id="radioDanger1">
-                      <label for="radioDanger1">
-                      </label>
-                    </div>
-                    <div class="icheck-danger d-inline">
-                      <input type="radio" name="r2" id="radioDanger2">
-                      <label for="radioDanger2">
-                      </label>
-                    </div>
-                    <div class="icheck-danger d-inline">
-                      <input type="radio" name="r2" disabled id="radioDanger3">
-                      <label for="radioDanger3">
-                        Danger radio
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Minimal red style -->
-              <div class="row">
-                <div class="col-sm-6">
-                  <!-- checkbox -->
-                  <div class="form-group clearfix">
-                    <div class="icheck-success d-inline">
-                      <input type="checkbox" checked id="checkboxSuccess1">
-                      <label for="checkboxSuccess1">
-                      </label>
-                    </div>
-                    <div class="icheck-success d-inline">
-                      <input type="checkbox" id="checkboxSuccess2">
-                      <label for="checkboxSuccess2">
-                      </label>
-                    </div>
-                    <div class="icheck-success d-inline">
-                      <input type="checkbox" disabled id="checkboxSuccess3">
-                      <label for="checkboxSuccess3">
-                        Success checkbox
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <!-- radio -->
-                  <div class="form-group clearfix">
-                    <div class="icheck-success d-inline">
-                      <input type="radio" name="r3" checked id="radioSuccess1">
-                      <label for="radioSuccess1">
-                      </label>
-                    </div>
-                    <div class="icheck-success d-inline">
-                      <input type="radio" name="r3" id="radioSuccess2">
-                      <label for="radioSuccess2">
-                      </label>
-                    </div>
-                    <div class="icheck-success d-inline">
-                      <input type="radio" name="r3" disabled id="radioSuccess3">
-                      <label for="radioSuccess3">
-                        Success radio
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /.card-body -->
-            <div class="card-footer">
-              Many more skins available. <a href="https://bantikyan.github.io/icheck-bootstrap/">Documentation</a>
-            </div>
-          </div>
-          <!-- /.card -->
-
-          <!-- Bootstrap Switch -->
-          <div class="card card-secondary">
-            <div class="card-header">
-              <h3 class="card-title">Bootstrap Switch</h3>
-            </div>
-            <div class="card-body">
-              <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch>
-              <input type="checkbox" name="my-checkbox" checked data-bootstrap-switch data-off-color="danger" data-on-color="success">
-            </div>
-          </div>
-          <!-- /.card -->
-        </div>
-        <!-- /.col (right) -->
-      </div>
-      <!-- /. row -->
-    </div><!-- /.container-fluid -->
-  </section>
-    <!-- /.container-fluid -->
-@endsection
+    </div>
+</header>
+  </body>
+</html>
+</body>
+</html>

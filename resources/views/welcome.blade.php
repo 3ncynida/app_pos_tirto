@@ -81,12 +81,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    3ncynida
                 </div>
 
                 <div class="links">
-                    <a href="{{route('category.index')}}">Category</a>
-                    <a href="{{route('product.index')}}">Product</a>
+                    <a href="{{route('sekolah.category.index')}}">Category</a>
+                    <a href="{{route('sekolah.product.index')}}">Product</a>
                     <a href="https://laravel-news.com">User</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
