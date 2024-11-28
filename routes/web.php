@@ -7,6 +7,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CustomersController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\MenuUiController;
+use App\Http\Controllers\DashboardAdmin;
 
 // Root route
 Route::get('/', function () {
@@ -30,6 +31,7 @@ Route::prefix('sekolah')->name('sekolah.')->group(function () {
 
 
     Route::group(['middleware' => ['auth', 'role:Admin']], function () {
+        Route::get('/dashboard', [DashboardAdmin::class, 'dataAdmin'])->name('dashboard');
     // Categories Routes
     Route::prefix('category')->name('category.')->group(function () {
         Route::get('/', [CategoriesController::class, 'index'])->name('index');
