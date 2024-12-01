@@ -83,8 +83,15 @@
                             <li class="nav-item">
                                 <a href="{{ route('sekolah.transaction.index') }}"
                                     class="nav-link {{ Request::is('sekolah/transaction') ? 'active' : '' }}">
-                                    <i class="fas fa-credit-card"></i> <!-- Icon for Transaction -->
+                                    <i class="fas fa-credit-card"></i>
                                     <p>Transaction</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('sekolah.report.index') }}"
+                                    class="nav-link {{ Request::is('sekolah/report') ? 'active' : '' }}">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <p>Laporan PDF</p>
                                 </a>
                             </li>
                         @endif

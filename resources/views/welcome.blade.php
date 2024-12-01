@@ -89,11 +89,12 @@
             <div class="links">
                 <a href="{{ route('sekolah.category.index') }}">Admin</a>
                 <a href="{{ route('sekolah.transaction.index') }}">Cashier</a>
-                <a href="{{ route('UI.button')}}">Guest</a>
+                <a href="{{ route('UI.button') }}">Guest</a>
                 <a href="https://github.com/3ncynida">GitHub</a>
             </div>
         </div>
     </div>
+    <div id="weather"></div>
     <script>
         const color = ['#CF0A0A', '#DC5F00', '#FFB200', '#3D3BF3', '#B8001F', '#337357'];
 
@@ -103,6 +104,19 @@
         }
 
         document.body.style.backgroundColor = getRandomItem(color);
+    </script>
+    <script>
+        const apiKey = '9c6bac275873f8331db3ae8a09578684'; // Ganti dengan API key Anda
+        const city = 'Jakarta';
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const weather = `Temperature: ${Math.round(data.main.temp - 273.15)}°C`;
+                document.getElementById('weather').innerText = weather;
+            })
+            .catch(error => console.error('Error:', error));
     </script>
 </body>
 

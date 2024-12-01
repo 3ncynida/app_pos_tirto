@@ -8,9 +8,10 @@
                         <h3 class="card-title">Daftar Transaksi</h3>
                     </div>
                     <div class="card-body">
-                        <a href="{{ route('sekolah.transaction.create') }}"><button class="btn btn-warning">Create Transaction</button></a>
+                        <a href="{{ route('sekolah.transaction.create') }}"><button class="btn btn-warning">Create
+                                Transaction</button></a>
                         <div class="table-responsive">
-                            <table id="example1" class="table table-bordered table-hover">
+                            <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
                                         <th>No</th>
@@ -38,11 +39,14 @@
                                             <td>
                                                 <div class="btn-group">
                                                     <!-- Edit Button -->
-                                                    <a href="{{ route('sekolah.transaction.show', $transaction->transaction_id) }}" class="btn btn-default bg-success text-white">
+                                                    <a href="{{ route('sekolah.transaction.show', $transaction->transaction_id) }}"
+                                                        class="btn btn-default bg-success text-white">
                                                         <i class="nav-icon fas fa-tag"></i>
                                                     </a>
                                                     <!-- Delete Button (Form) -->
-                                                    <form action="{{ route('sekolah.transaction.destroy', $transaction->transaction_id) }}" method="POST" style="display:inline;">
+                                                    <form
+                                                        action="{{ route('sekolah.transaction.destroy', $transaction->transaction_id) }}"
+                                                        method="POST" style="display:inline;">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-default bg-danger">
@@ -50,7 +54,7 @@
                                                         </button>
                                                     </form>
                                                 </div>
-                                                
+
                                             </td>
                                         </tr>
                                     @endforeach
