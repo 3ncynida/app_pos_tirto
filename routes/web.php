@@ -9,11 +9,15 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\MenuUiController;
 use App\Http\Controllers\DashboardAdmin;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\Auth\GoogleController;
 
 // Root route
 Route::get('/', function () {
     return view('welcome');
 });
+ 
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google');
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 // UI Routes
 Route::prefix('UI')->name('UI.')->group(function () {
